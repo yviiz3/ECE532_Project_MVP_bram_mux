@@ -69,16 +69,16 @@ set rc [catch {
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/wt [current_project]
-  set_property parent.project_path C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr [current_project]
-  set_property ip_output_repo C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.cache/wt [current_project]
+  set_property parent.project_path C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.xpr [current_project]
+  set_property ip_output_repo C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/synth_1/project_mvp_top.dcp
-  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
+  add_files -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/project_mvp_top.dcp
+  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
   link_design -top project_mvp_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

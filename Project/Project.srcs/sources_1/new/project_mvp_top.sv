@@ -27,8 +27,7 @@ module project_mvp_top(
     input data_in,
     output [11:0] data_out,
     output HSYNC,
-    output VSYNC,
-    output led[15:0]
+    output VSYNC
     );
     
     wire [7:0] data_out_rx;
@@ -59,7 +58,6 @@ module project_mvp_top(
     );
     
     reg load_done;
-
     always @(posedge clk) begin
         if (reset)
             load_done <= 1'b0;
@@ -68,25 +66,90 @@ module project_mvp_top(
     end
     
     localparam int W = 17;
+    // mux to input_bram
+    logic              mux_bram_ena;
+    logic [0:0]        mux_bram_wea;
+    logic [13:0]       mux_bram_addra;
+    logic [W-1:0]      mux_bram_dina;
+
+    logic              mux_bram_enb;
+    logic [13:0]       mux_bram_addrb;
+    logic [W-1:0]      mux_bram_doutb;
+
+    logic status_1;
+    logic status_2;
+    logic status_3;
+
+    assign status_1 = ~load_done;
+    assign status_2 = 1'b0;
+    assign status_3 =  load_done;
+
+    logic [13:0] bram_addr;
+    logic [W-1:0] bram_dout;
+    input_bram_mux #(
+        .ADDR_W(14),
+        .DATA_W(W)
+    ) u_input_bram_mux (
+        .clk        (clk),
+        .reset      (reset),
+
+        .bram_ena   (mux_bram_ena),
+        .bram_wea   (mux_bram_wea),
+        .bram_addra (mux_bram_addra),
+        .bram_dina  (mux_bram_dina),
+
+        .bram_enb   (mux_bram_enb),
+        .bram_addrb (mux_bram_addrb),
+        .bram_doutb (mux_bram_doutb),
+
+        // UART
+        .a_en_1     (bram_ena),
+        .a_we_1     (bram_wea[0]),
+        .a_addr_1   (bram_addra),
+        .a_din_1    (bram_dina),
+        .b_en_1     (1'b0),
+        .b_addr_1   (14'd0),
+        .b_dout_1   (),
+        .status_1   (status_1),
+
+        // Victor
+        .a_en_2     (1'b0),
+        .a_we_2     (1'b0),
+        .a_addr_2   (14'd0),
+        .a_din_2    ('0),
+        .b_en_2     (1'b0),
+        .b_addr_2   (14'd0),
+        .b_dout_2   (),
+        .status_2   (status_2),
+
+        // Jonathan
+        .a_en_3     (1'b0),
+        .a_we_3     (1'b0),
+        .a_addr_3   (14'd0),
+        .a_din_3    ('0),
+        .b_en_3     (load_done),
+        .b_addr_3   (bram_addr),
+        .b_dout_3   (bram_dout),
+        .status_3   (status_3)
+    );
+    
+    blk_mem_gen_0 input_bram (
+        .clka  (clk),
+        .ena   (mux_bram_ena),
+        .wea   (mux_bram_wea),
+        .addra (mux_bram_addra),
+        .dina  (mux_bram_dina),
+
+        .clkb  (clk),
+        .enb   (mux_bram_enb),
+        .addrb (mux_bram_addrb),
+        .doutb (mux_bram_doutb)
+    );
+    
     localparam int FRAC = 8;
     localparam int N = 64;
     localparam int MEM_DEPTH = 12354;
     localparam int LED_BLINK_BIT = 24;
-    
-    logic [13:0] bram_addr;
-    logic [W-1:0] bram_dout;
-    blk_mem_gen_0 input_bram (
-        .clka  (clk),
-        .ena   (bram_ena),
-        .wea   (bram_wea),
-        .addra (bram_addra),
-        .dina  (bram_dina),
-    
-        .clkb  (clk),
-        .enb   (load_done),
-        .addrb (bram_addr),
-        .doutb (bram_dout)
-    );
     
     logic [13:0] bram_addr_in;
     logic [W-1:0] bram_din;
@@ -125,31 +188,6 @@ module project_mvp_top(
         .out_bram_din    (vga_bram_din),
         .out_wea         (out_wea)
     );
-logic [15:0] wea_count;
-
-always_ff @(posedge clk or posedge reset) begin
-    if (reset)
-        wea_count <= 16'd0;
-    else if (out_wea)
-        wea_count <= wea_count + 1'b1;
-end
-
-assign led[0] = wea_count[0];
-assign led[1] = wea_count[1];
-assign led[2] = wea_count[2];
-assign led[3] = wea_count[3];
-assign led[4] = wea_count[4];
-assign led[5] = wea_count[5];
-assign led[6] = wea_count[6];
-assign led[7] = wea_count[7];
-assign led[8] = wea_count[8];
-assign led[9] = wea_count[9];
-assign led[10] = wea_count[10];
-assign led[11] = wea_count[11];
-assign led[12] = wea_count[12];
-assign led[13] = wea_count[13];
-assign led[14] = wea_count[14];
-assign led[15] = wea_count[15];
 
     wire clk_25M;
     wire clk_locked;

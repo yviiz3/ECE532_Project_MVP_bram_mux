@@ -24,57 +24,58 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/wt [current_project]
-set_property parent.project_path C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.cache/wt [current_project]
+set_property parent.project_path C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/ip [current_project]
+set_property ip_output_repo c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img02.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img03.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img08.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img01.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img05.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img07.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.coe
-add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img02.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img03.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img08.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img01.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img05.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img07.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.coe
 read_mem {
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img08.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img07.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img01.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img02.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img03.mem
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img05.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img08.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img07.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img01.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img02.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img03.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img05.mem
 }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/reconstruction_buf.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/project_mvp_top.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/input_bram_mux.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_buf.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/project_mvp_top.sv
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/uart_buf.v
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/uart_rx.v
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_buf.v
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_output.v
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_buf.v
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_output.v
 }
-read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -84,8 +85,8 @@ set_property used_in_implementation false [get_files -all c:/Users/13083/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc]
+read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

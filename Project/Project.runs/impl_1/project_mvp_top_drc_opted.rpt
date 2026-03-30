@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar 22 14:50:59 2026
+| Date         : Mon Mar 30 17:02:27 2026
 | Host         : Re1nA running 64-bit major release  (build 9200)
 | Command      : report_drc -file project_mvp_top_drc_opted.rpt -pb project_mvp_top_drc_opted.pb -rpx project_mvp_top_drc_opted.rpx
 | Design       : project_mvp_top
@@ -72,7 +72,7 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO data_in connects to flops which have these uart_rx_1/data_out[7]_i_1_n_0, reset_IBUF set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO data_in connects to flops which have these reset_IBUF, uart_rx_1/data_out[7]_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774205369">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774904455">
   <File Type="PA-TCL" Name="project_mvp_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="project_mvp_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="project_mvp_top_reports.tcl"/>
@@ -47,6 +47,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/vga_output.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/input_bram_mux.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

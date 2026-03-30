@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr">
+<Project Version="7" Minor="39" Path="C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="794678e1682845b1850eb9474887acc2"/>
@@ -95,6 +95,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/vga_output.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/input_bram_mux.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun Mar 22 14:51:57 2026
+| Date             : Mon Mar 30 17:03:24 2026
 | Host             : Re1nA running 64-bit major release  (build 9200)
 | Command          : report_power -file project_mvp_top_power_routed.rpt -pb project_mvp_top_power_summary_routed.pb -rpx project_mvp_top_power_routed.rpx
 | Design           : project_mvp_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.236        |
+| Total On-Chip Power (W)  | 0.235        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.138        |
+| Dynamic (W)              | 0.136        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.9         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.007 |        6 |       --- |             --- |
-| Slice Logic    |     0.001 |     3058 |       --- |             --- |
-|   LUT as Logic |     0.001 |      901 |     63400 |            1.42 |
-|   CARRY4       |    <0.001 |       84 |     15850 |            0.53 |
+| Clocks         |     0.006 |        6 |       --- |             --- |
+| Slice Logic    |     0.001 |     3105 |       --- |             --- |
+|   LUT as Logic |     0.001 |      947 |     63400 |            1.49 |
+|   CARRY4       |    <0.001 |       80 |     15850 |            0.50 |
+|   Register     |    <0.001 |     1580 |    126800 |            1.25 |
 |   F7/F8 Muxes  |    <0.001 |      221 |     63400 |            0.35 |
-|   Register     |    <0.001 |     1595 |    126800 |            1.26 |
 |   Others       |     0.000 |       84 |       --- |             --- |
-| Signals        |     0.002 |     2557 |       --- |             --- |
+| Signals        |     0.002 |     2611 |       --- |             --- |
 | Block RAM      |     0.011 |       24 |       135 |           17.78 |
 | MMCM           |     0.116 |        1 |         6 |           16.67 |
 | DSPs           |    <0.001 |        1 |       240 |            0.42 |
-| I/O            |    <0.001 |       34 |       210 |           16.19 |
+| I/O            |    <0.001 |       18 |       210 |            8.57 |
 | Static Power   |     0.099 |          |           |                 |
-| Total          |     0.236 |          |           |                 |
+| Total          |     0.235 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.037 |       0.021 |      0.016 |
+| Vccint    |       1.000 |     0.035 |       0.019 |      0.016 |
 | Vccaux    |       1.800 |     0.082 |       0.064 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -147,10 +147,10 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| project_mvp_top        |     0.138 |
-|   input_bram           |     0.004 |
-|     U0                 |     0.004 |
-|       inst_blk_mem_gen |     0.004 |
+| project_mvp_top        |     0.136 |
+|   input_bram           |     0.002 |
+|     U0                 |     0.002 |
+|       inst_blk_mem_gen |     0.002 |
 |   output_bram          |     0.009 |
 |     U0                 |     0.009 |
 |       inst_blk_mem_gen |     0.009 |
