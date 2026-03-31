@@ -3,13 +3,13 @@ import time
 
 COM_PORT = "COM6"
 BAUDRATE = 115200
-MEM_FILE = "svd_vectors_64x64_img06.mem"
+MEM_FILE = "svd_vectors_200x200_img07.mem"   # 改成你现在的 mem file 名字
 CHUNK_SIZE = 256
 WRITE_GAP_SEC = 0.002
 
 LITTLE_ENDIAN = True
-WORD_BITS = 18
-BYTES_PER_WORD = 3
+WORD_BITS = 16
+BYTES_PER_WORD = 2
 MAX_VALUE = (1 << WORD_BITS) - 1
 
 
@@ -37,11 +37,11 @@ def load_mem_as_bytes(path: str) -> bytes:
                 )
 
             if LITTLE_ENDIAN:
+                # low byte first, then high byte
                 out.append(value & 0xFF)
                 out.append((value >> 8) & 0xFF)
-                out.append((value >> 16) & 0xFF)
             else:
-                out.append((value >> 16) & 0xFF)
+                # high byte first, then low byte
                 out.append((value >> 8) & 0xFF)
                 out.append(value & 0xFF)
 
