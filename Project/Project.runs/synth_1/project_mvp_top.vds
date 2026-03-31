@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar 31 12:25:24 2026
-# Process ID: 104696
+# Start of session at: Tue Mar 31 14:20:58 2026
+# Process ID: 105436
 # Current directory: C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1
 # Command line: vivado.exe -log project_mvp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_mvp_top.tcl
 # Log file: C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/project_mvp_top.vds
@@ -15,98 +15,82 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 33476 
+INFO: Helper process launched with PID 70108 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 496.164 ; gain = 102.738
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 496.758 ; gain = 102.738
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'project_mvp_top' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/project_mvp_top.sv:23]
+	Parameter EXP_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter OUT_W bound to: 32'sb00000000000000000000000000000100 
+	Parameter IMG_N bound to: 32'sb00000000000000000000000011001000 
+	Parameter K bound to: 32'sb00000000000000000000000001100100 
+	Parameter BUF bound to: 32'sb00000000000000000000000000000101 
+	Parameter EXP_MEM_DEPTH bound to: 32'sb00000000000000011101010110001000 
+	Parameter OUT_MEM_DEPTH bound to: 32'sb00000000000000001001110001000000 
+	Parameter EXP_ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter OUT_ADDR_W bound to: 32'sb00000000000000000000000000010000 
 	Parameter W bound to: 32'sb00000000000000000000000000010001 
-	Parameter FRAC bound to: 32'sb00000000000000000000000000001000 
-	Parameter N bound to: 32'sb00000000000000000000000001000000 
-	Parameter MEM_DEPTH bound to: 32'sb00000000000000000011000001000010 
-	Parameter LED_BLINK_BIT bound to: 32'sb00000000000000000000000000011000 
 INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v:23]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v:34]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v:35]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v:66]
 INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (1#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_rx.v:23]
 INFO: [Synth 8-6157] synthesizing module 'uart_buf' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:23]
-	Parameter BUF_DEPTH bound to: 12354 - type: integer 
+	Parameter BUF_DEPTH bound to: 120200 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:37]
-INFO: [Synth 8-4471] merging register 'bram_wea_reg[0:0]' into 'bram_ena_reg' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:51]
-WARNING: [Synth 8-6014] Unused sequential element bram_wea_reg was removed.  [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:51]
+INFO: [Synth 8-4471] merging register 'bram_wea_reg[0:0]' into 'bram_ena_reg' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:49]
+WARNING: [Synth 8-6014] Unused sequential element bram_wea_reg was removed.  [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'uart_buf' (2#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/uart_buf.v:23]
 INFO: [Synth 8-6157] synthesizing module 'input_bram_mux' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/input_bram_mux.sv:23]
-	Parameter ADDR_W bound to: 32'sb00000000000000000000000000001110 
-	Parameter DATA_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter DATA_W bound to: 32'sb00000000000000000000000000010000 
 INFO: [Synth 8-6155] done synthesizing module 'input_bram_mux' (3#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/input_bram_mux.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'reconstruction_compute_64_1dsp' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:23]
-	Parameter W bound to: 32'sb00000000000000000000000000010001 
-	Parameter FRAC bound to: 32'sb00000000000000000000000000001000 
-	Parameter N bound to: 32'sb00000000000000000000000001000000 
-	Parameter MEM_DEPTH bound to: 32'sb00000000000000000011000001000010 
-	Parameter LED_BLINK_BIT bound to: 32'sb00000000000000000000000000011000 
-	Parameter IDX_SCALE bound to: 32'sb00000000000000000000000000000000 
-	Parameter IDX_K bound to: 32'sb00000000000000000000000000000001 
-	Parameter IDX_U bound to: 32'sb00000000000000000000000000000010 
-	Parameter IDX_S bound to: 32'sb00000000000000000001000000000010 
-	Parameter IDX_VT bound to: 32'sb00000000000000000001000001000010 
-	Parameter IDX_A bound to: 32'sb00000000000000000010000001000010 
-	Parameter ST_RD_SCALE_ADDR bound to: 32'sb00000000000000000000000000000000 
-	Parameter ST_RD_SCALE_WAIT bound to: 32'sb00000000000000000000000000000001 
-	Parameter ST_RD_SCALE_CAP bound to: 32'sb00000000000000000000000000000010 
-	Parameter ST_RD_K_ADDR bound to: 32'sb00000000000000000000000000000011 
-	Parameter ST_RD_K_WAIT bound to: 32'sb00000000000000000000000000000100 
-	Parameter ST_RD_K_CAP bound to: 32'sb00000000000000000000000000000101 
-	Parameter ST_CHK_CAP_START bound to: 32'sb00000000000000000000000000000110 
-	Parameter ST_CHK_CAP_WAIT bound to: 32'sb00000000000000000000000000000111 
-	Parameter ST_CHECK_T bound to: 32'sb00000000000000000000000000001000 
-	Parameter ST_RD_S_ADDR bound to: 32'sb00000000000000000000000000001001 
-	Parameter ST_RD_S_WAIT bound to: 32'sb00000000000000000000000000001010 
-	Parameter ST_RD_S_CAP bound to: 32'sb00000000000000000000000000001011 
-	Parameter ST_RD_U_ADDR bound to: 32'sb00000000000000000000000000001100 
-	Parameter ST_RD_U_WAIT bound to: 32'sb00000000000000000000000000001101 
-	Parameter ST_RD_U_CAP bound to: 32'sb00000000000000000000000000001110 
-	Parameter ST_RD_V_ADDR bound to: 32'sb00000000000000000000000000001111 
-	Parameter ST_RD_V_WAIT bound to: 32'sb00000000000000000000000000010000 
-	Parameter ST_RD_V_CAP bound to: 32'sb00000000000000000000000000010001 
-	Parameter ST_MUL_SCALE bound to: 32'sb00000000000000000000000000010010 
-	Parameter ST_MUL_SV bound to: 32'sb00000000000000000000000000010011 
-	Parameter ST_MUL_TERM bound to: 32'sb00000000000000000000000000010100 
-	Parameter ST_WRITE_A bound to: 32'sb00000000000000000000000000010101 
-	Parameter ST_CHK_VFY_START bound to: 32'sb00000000000000000000000000010110 
-	Parameter ST_CHK_VFY_WAIT bound to: 32'sb00000000000000000000000000010111 
-	Parameter ST_CHK_VFY_DECIDE bound to: 32'sb00000000000000000000000000011000 
-	Parameter ST_PASS bound to: 32'sb00000000000000000000000000011001 
-	Parameter ST_FAIL bound to: 32'sb00000000000000000000000000011010 
-INFO: [Synth 8-6157] synthesizing module 'svd_bram_firstcol_checker' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv:23]
-	Parameter W bound to: 32'sb00000000000000000000000000010001 
-	Parameter N bound to: 32'sb00000000000000000000000001000000 
-	Parameter IDX_A bound to: 32'sb00000000000000000010000001000010 
-	Parameter ST_IDLE bound to: 32'sb00000000000000000000000000000000 
-	Parameter ST_CAP_ADDR bound to: 32'sb00000000000000000000000000000001 
-	Parameter ST_CAP_WAIT bound to: 32'sb00000000000000000000000000000010 
-	Parameter ST_CAP_STORE bound to: 32'sb00000000000000000000000000000011 
-	Parameter ST_VFY_ADDR bound to: 32'sb00000000000000000000000000000100 
-	Parameter ST_VFY_WAIT bound to: 32'sb00000000000000000000000000000101 
-	Parameter ST_VFY_CMP bound to: 32'sb00000000000000000000000000000110 
-WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv:114]
-INFO: [Synth 8-6155] done synthesizing module 'svd_bram_firstcol_checker' (5#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv:23]
-WARNING: [Synth 8-6014] Unused sequential element ready_reg was removed.  [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:181]
-WARNING: [Synth 8-6014] Unused sequential element done_reg was removed.  [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:182]
-INFO: [Synth 8-6155] done synthesizing module 'reconstruction_compute_64_1dsp' (6#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'reconstruction_buf' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_buf.sv:23]
-	Parameter W bound to: 32'sb00000000000000000000000000010001 
-	Parameter SRC_W bound to: 32'sb00000000000000000000000001000000 
-	Parameter DST_W bound to: 32'sb00000000000000000000001010000000 
-	Parameter A_BASE bound to: 32'sb00000000000000000010000001000010 
-INFO: [Synth 8-6155] done synthesizing module 'reconstruction_buf' (7#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_buf.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (8#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-104696-Re1nA/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reconstruction_compute_200_5dsp' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_200_5dsp.sv:23]
+	Parameter W bound to: 32'sb00000000000000000000000000010000 
+	Parameter OUT_W bound to: 32'sb00000000000000000000000000000100 
+	Parameter FRAC_UV bound to: 32'sb00000000000000000000000000001110 
+	Parameter N bound to: 32'sb00000000000000000000000011001000 
+	Parameter K bound to: 32'sb00000000000000000000000001100100 
+	Parameter BUF bound to: 32'sb00000000000000000000000000000101 
+	Parameter EXP_MEM_DEPTH bound to: 32'sb00000000000000011101010110001000 
+	Parameter OUT_MEM_DEPTH bound to: 32'sb00000000000000001001110001000000 
+	Parameter EXP_ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter OUT_ADDR_W bound to: 32'sb00000000000000000000000000010000 
+	Parameter IDX_V bound to: 32'sb00000000000000001001110001000000 
+	Parameter IDX_U bound to: 32'sb00000000000000010011100010000000 
+	Parameter IDX_SIGMA bound to: 32'sb00000000000000011101010011000000 
+	Parameter FRAC_SV bound to: 32'sb00000000000000000000000000001011 
+	Parameter FRAC_TERM bound to: 32'sb00000000000000000000000000011001 
+	Parameter S_MUL_W bound to: 32'sb00000000000000000000000000011001 
+	Parameter SV_DSP_W bound to: 32'sb00000000000000000000000000011001 
+	Parameter SV_BUF_W bound to: 32'sb00000000000000000000000000100000 
+	Parameter VT_MUL_W bound to: 32'sb00000000000000000000000000010010 
+	Parameter ST_LOAD_S_STREAM bound to: 32'sb00000000000000000000000000000000 
+	Parameter ST_INIT_PIXEL bound to: 32'sb00000000000000000000000000000001 
+	Parameter ST_WAIT_BUF bound to: 32'sb00000000000000000000000000000010 
+	Parameter ST_MUL_SV bound to: 32'sb00000000000000000000000000000011 
+	Parameter ST_MUL_TERM bound to: 32'sb00000000000000000000000000000100 
+	Parameter ST_WRITE_A bound to: 32'sb00000000000000000000000000000101 
+	Parameter ST_DONE bound to: 32'sb00000000000000000000000000000110 
+INFO: [Synth 8-6157] synthesizing module 'svd_preloader_200_5dsp' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:23]
+	Parameter W bound to: 32'sb00000000000000000000000000010000 
+	Parameter N bound to: 32'sb00000000000000000000000011001000 
+	Parameter K bound to: 32'sb00000000000000000000000001100100 
+	Parameter BUF bound to: 32'sb00000000000000000000000000000101 
+	Parameter EXP_MEM_DEPTH bound to: 32'sb00000000000000011101010110001000 
+	Parameter EXP_ADDR_W bound to: 32'sb00000000000000000000000000010001 
+	Parameter IDX_V bound to: 32'sb00000000000000001001110001000000 
+	Parameter IDX_U bound to: 32'sb00000000000000010011100010000000 
+INFO: [Synth 8-6155] done synthesizing module 'svd_preloader_200_5dsp' (5#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:23]
+WARNING: [Synth 8-5856] 3D RAM u_buf_bank_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM v_buf_bank_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'reconstruction_compute_200_5dsp' (6#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_200_5dsp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (7#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (8#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/.Xil/Vivado-105436-Re1nA/realtime/blk_mem_gen_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'vga_buf' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_buf.v:23]
 INFO: [Synth 8-6157] synthesizing module 'vga_output' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_output.v:23]
 	Parameter H_SYNC bound to: 95 - type: integer 
@@ -117,11 +101,11 @@ INFO: [Synth 8-6157] synthesizing module 'vga_output' [C:/Users/13083/Documents/
 	Parameter V_VISIBLE_BOTTOM bound to: 514 - type: integer 
 	Parameter H_TOTAL bound to: 799 - type: integer 
 	Parameter V_TOTAL bound to: 524 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga_output' (10#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_output.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'vga_buf' (11#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_buf.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'project_mvp_top' (12#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/project_mvp_top.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'vga_output' (9#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_output.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'vga_buf' (10#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/vga_buf.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'project_mvp_top' (11#1) [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/project_mvp_top.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 554.789 ; gain = 161.363
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 564.914 ; gain = 170.895
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -134,10 +118,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 554.789 ; gain = 161.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 564.914 ; gain = 170.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 554.789 ; gain = 161.363
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 564.914 ; gain = 170.895
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -160,26 +144,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/project_mvp_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.609 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 921.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.031 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 921.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.664 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 929.664 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'input_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'output_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 921.031 ; gain = 527.605
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 929.664 ; gain = 535.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 921.031 ; gain = 527.605
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 929.664 ; gain = 535.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -190,97 +174,127 @@ Applied set_property DONT_TOUCH = true for output_bram. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for vga_clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for input_bram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 921.031 ; gain = 527.605
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 929.664 ; gain = 535.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'byte_count_reg' in module 'uart_buf'
 INFO: [Synth 8-5546] ROM "uart_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "byte0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "byte1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "bram_ena" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "byte_count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "exp_A0_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "busy" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "idx" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "led_pass" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "j" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "t" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "v_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "byte0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_cache_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[64]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[65]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[66]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[67]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[68]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[69]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[70]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[71]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[72]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[73]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[74]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[75]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[76]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[77]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[78]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[79]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[80]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[81]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[82]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[83]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[84]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[85]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[86]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[87]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[88]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[89]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[90]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[91]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[92]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[93]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[94]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[95]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[96]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[97]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_cache_reg[98]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "u_buf_bank_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_buf_bank_reg[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_buf_bank_reg[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_buf_bank_reg[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_buf_bank_reg[0][4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                  iSTATE |                              001 |                               00
-                 iSTATE0 |                              010 |                               01
-                 iSTATE1 |                              100 |                               10
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'byte_count_reg' using encoding 'one-hot' in module 'uart_buf'
+INFO: [Synth 8-3354] encoded FSM with state register 'byte_count_reg' using encoding 'sequential' in module 'uart_buf'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 921.031 ; gain = 527.605
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 929.664 ; gain = 535.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -293,47 +307,36 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     37 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 4     
-	   2 Input     16 Bit       Adders := 1     
-	   2 Input     14 Bit       Adders := 2     
-	   3 Input     14 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 5     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               37 Bit    Registers := 1     
-	               32 Bit    Registers := 8     
-	               17 Bit    Registers := 72    
-	               16 Bit    Registers := 1     
-	               14 Bit    Registers := 4     
+	               48 Bit    Registers := 1     
+	               25 Bit    Registers := 5     
+	               17 Bit    Registers := 105   
+	               16 Bit    Registers := 22    
 	               12 Bit    Registers := 1     
 	               10 Bit    Registers := 4     
-	                8 Bit    Registers := 3     
-	                7 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 20    
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 7     
+	                1 Bit    Registers := 25    
 +---Muxes : 
-	  27 Input     37 Bit        Muxes := 1     
-	   8 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	  27 Input     32 Bit        Muxes := 3     
-	   2 Input     17 Bit        Muxes := 8     
-	   4 Input     17 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 2     
-	   3 Input     14 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 2     
+	   8 Input     48 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 17    
 	   2 Input     12 Bit        Muxes := 4     
-	   2 Input      5 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 4     
-	   2 Input      3 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 27    
-	   3 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 9     
-	   9 Input      1 Bit        Muxes := 64    
-	  27 Input      1 Bit        Muxes := 17    
+	   2 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 137   
+	   8 Input      1 Bit        Muxes := 116   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -344,7 +347,7 @@ Hierarchical RTL Component report
 Module project_mvp_top 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 Module uart_rx 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -361,71 +364,58 @@ Detailed RTL Component Info :
 Module uart_buf 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     14 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
 +---Registers : 
-	               17 Bit    Registers := 1     
-	               14 Bit    Registers := 2     
-	                8 Bit    Registers := 2     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   3 Input     14 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 Module input_bram_mux 
 Detailed RTL Component Info : 
 +---Registers : 
 	                3 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     17 Bit        Muxes := 6     
-Module svd_bram_firstcol_checker 
+	   2 Input     16 Bit        Muxes := 6     
+Module svd_preloader_200_5dsp 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               17 Bit    Registers := 64    
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	               17 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 6     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-	   8 Input      1 Bit        Muxes := 9     
-	   9 Input      1 Bit        Muxes := 64    
-Module reconstruction_compute_64_1dsp 
+	   2 Input      1 Bit        Muxes := 7     
+Module reconstruction_compute_200_5dsp 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     37 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 3     
-	   2 Input     14 Bit       Adders := 1     
-	   3 Input     14 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
-	               37 Bit    Registers := 1     
-	               32 Bit    Registers := 6     
-	               17 Bit    Registers := 7     
-	               14 Bit    Registers := 2     
-	                7 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	               48 Bit    Registers := 1     
+	               25 Bit    Registers := 5     
+	               17 Bit    Registers := 101   
+	               16 Bit    Registers := 20    
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	  27 Input     37 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 1     
-	  27 Input     32 Bit        Muxes := 3     
-	   2 Input     17 Bit        Muxes := 2     
-	   4 Input     17 Bit        Muxes := 2     
-	   2 Input     14 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 3     
-	  27 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 5     
-Module reconstruction_buf 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
+	   8 Input     48 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 10    
+	   2 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 116   
+	   2 Input      1 Bit        Muxes := 109   
 Module vga_output 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -460,34 +450,163 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'idx_reg[31:0]' into 'idx_reg[31:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv:60]
-INFO: [Synth 8-5545] ROM "idx" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "busy" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'i_reg[31:0]' into 'i_reg[31:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:188]
-INFO: [Synth 8-4471] merging register 't_reg[31:0]' into 't_reg[31:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:190]
-INFO: [Synth 8-4471] merging register 'j_reg[31:0]' into 'j_reg[31:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv:189]
-INFO: [Synth 8-5545] ROM "t" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "j" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-DSP Report: Generating DSP fx_mul_return0, operation Mode is: A*B.
-DSP Report: operator fx_mul_return0 is absorbed into DSP fx_mul_return0.
-INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "uart_buf_1/uart_done" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "vga_buf_1/vga_output_1/v_count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'u_compute/u_checker/rd_addr_reg[0]' (FDRE) to 'u_compute/u_checker/rd_addr_reg[2]'
-INFO: [Synth 8-3886] merging instance 'u_compute/u_checker/rd_addr_reg[2]' (FDRE) to 'u_compute/u_checker/rd_addr_reg[3]'
-INFO: [Synth 8-3886] merging instance 'u_compute/u_checker/rd_addr_reg[3]' (FDRE) to 'u_compute/u_checker/rd_addr_reg[4]'
-INFO: [Synth 8-3886] merging instance 'u_compute/u_checker/rd_addr_reg[4]' (FDRE) to 'u_compute/u_checker/rd_addr_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_compute/u_checker/rd_addr_reg[5] )
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[0]' (FDRE) to 'u_compute/bram_din_reg[1]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[1]' (FDRE) to 'u_compute/bram_din_reg[2]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[2]' (FDRE) to 'u_compute/bram_din_reg[3]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[3]' (FDRE) to 'u_compute/bram_din_reg[4]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[4]' (FDRE) to 'u_compute/bram_din_reg[5]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[5]' (FDRE) to 'u_compute/bram_din_reg[6]'
-INFO: [Synth 8-3886] merging instance 'u_compute/bram_din_reg[6]' (FDRE) to 'u_compute/bram_din_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_compute/bram_din_reg[7] )
+INFO: [Synth 8-4471] merging register 'ld_issue_idx_reg[2:0]' into 'ld_issue_idx_reg[2:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:95]
+INFO: [Synth 8-4471] merging register 'next_load_t_reg[7:0]' into 'next_load_t_reg[7:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:93]
+INFO: [Synth 8-4471] merging register 'ld_issue_idx_reg[2:0]' into 'ld_issue_idx_reg[2:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:95]
+INFO: [Synth 8-4471] merging register 'next_load_t_reg[7:0]' into 'next_load_t_reg[7:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:93]
+INFO: [Synth 8-4471] merging register 'ld_base_t_reg[7:0]' into 'ld_base_t_reg[7:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv:94]
+INFO: [Synth 8-4471] merging register 'i_reg[7:0]' into 'i_reg[7:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_200_5dsp.sv:169]
+INFO: [Synth 8-4471] merging register 'j_reg[7:0]' into 'j_reg[7:0]' [C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_200_5dsp.sv:170]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc2, operation Mode is: A2*B.
+DSP Report: register sv_buf_reg[4] is absorbed into DSP acc2.
+DSP Report: operator acc2 is absorbed into DSP acc2.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc0, operation Mode is: PCIN+A2*B.
+DSP Report: register sv_buf_reg[0] is absorbed into DSP acc0.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc5 is absorbed into DSP acc0.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc0, operation Mode is: PCIN+A2*B.
+DSP Report: register sv_buf_reg[3] is absorbed into DSP acc0.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc3 is absorbed into DSP acc0.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc0, operation Mode is: PCIN+A2*B.
+DSP Report: register sv_buf_reg[2] is absorbed into DSP acc0.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc4 is absorbed into DSP acc0.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP acc0, operation Mode is: PCIN+A2*B.
+DSP Report: register sv_buf_reg[1] is absorbed into DSP acc0.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc5 is absorbed into DSP acc0.
+DSP Report: Generating DSP vga_buf_1/bram_addrb0, operation Mode is: C'+A2*(B:0xc8).
+DSP Report: register vga_buf_1/vga_output_1/v_valid_count_reg is absorbed into DSP vga_buf_1/bram_addrb0.
+DSP Report: register vga_buf_1/vga_output_1/h_valid_count_reg is absorbed into DSP vga_buf_1/bram_addrb0.
+DSP Report: operator vga_buf_1/bram_addrb0 is absorbed into DSP vga_buf_1/bram_addrb0.
+DSP Report: operator vga_buf_1/bram_addrb1 is absorbed into DSP vga_buf_1/bram_addrb0.
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[0]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[1]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[2]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[3]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[4]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[5]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[6]' (FDSE) to 'u_compute/s_bram_addr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[8]' (FDRE) to 'u_compute/s_cap_idx_d0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[9]' (FDRE) to 'u_compute/s_bram_addr_reg[11]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[10]' (FDSE) to 'u_compute/s_bram_addr_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[11]' (FDRE) to 'u_compute/s_bram_addr_reg[13]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[12]' (FDSE) to 'u_compute/s_bram_addr_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_bram_addr_reg[13] )
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[14]' (FDSE) to 'u_compute/s_bram_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_compute/s_bram_addr_reg[15]' (FDSE) to 'u_compute/s_bram_addr_reg[16]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_compute/\s_bram_addr_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[64][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[63][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[62][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[61][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[60][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[59][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[58][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[57][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[56][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[55][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[54][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[53][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[52][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[51][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[50][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[49][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[48][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[47][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[46][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[45][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[44][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[43][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[42][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[41][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[40][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[39][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[38][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[37][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[36][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[35][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[34][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[33][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[32][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[31][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[30][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[29][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[28][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[27][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[26][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[25][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[24][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[23][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[22][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[21][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[20][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[19][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[18][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[17][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[16][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[15][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[14][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[13][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[12][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[11][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[10][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[9][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[8][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[7][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[6][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[5][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[4][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[3][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[2][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[1][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[99][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[98][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[97][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[96][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[95][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[94][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[93][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[92][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[91][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[90][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[89][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[88][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[87][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[86][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[85][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[84][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[83][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[82][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[81][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[80][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[79][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[78][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[77][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[76][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[75][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[74][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[73][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[72][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[71][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[70][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[69][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[68][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_compute/\s_cache_reg[67][16] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'u_input_bram_mux/status_array_delayed_reg[2]' (FDR) to 'recon_start_reg'
 INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[0]' (FD) to 'vga_buf_1/vga_data_in_reg[4]'
 INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[1]' (FD) to 'vga_buf_1/vga_data_in_reg[5]'
 INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[2]' (FD) to 'vga_buf_1/vga_data_in_reg[6]'
@@ -497,18 +616,28 @@ INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[5]' (FD) to 'vg
 INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[6]' (FD) to 'vga_buf_1/vga_data_in_reg[10]'
 INFO: [Synth 8-3886] merging instance 'vga_buf_1/vga_data_in_reg[7]' (FD) to 'vga_buf_1/vga_data_in_reg[11]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 921.031 ; gain = 527.605
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 929.664 ; gain = 535.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping  Report (see note below)
-+-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|reconstruction_compute_64_1dsp | A*B         | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                     | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|reconstruction_compute_200_5dsp | A*B            | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | A2*B           | 25     | 16     | -      | -      | 41     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | A*B            | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | PCIN+A2*B      | 25     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | A*B            | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | PCIN+A2*B      | 25     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | A*B            | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | PCIN+A2*B      | 25     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | A*B            | 18     | 16     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|reconstruction_compute_200_5dsp | PCIN+A2*B      | 25     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|project_mvp_top                 | C'+A2*(B:0xc8) | 10     | 8      | 10     | -      | 16     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++--------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -526,13 +655,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'vga_clk/clk_out1' to pin 'vga_clk/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 949.305 ; gain = 555.879
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 960.066 ; gain = 566.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -544,7 +673,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -568,7 +697,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -581,7 +710,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:39 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -593,25 +722,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -633,59 +762,59 @@ Report Cell Usage:
 |1     |blk_mem_gen_0 |     1|
 |2     |blk_mem_gen_1 |     1|
 |3     |clk_wiz_0     |     1|
-|4     |CARRY4        |    80|
-|5     |DSP48E1       |     1|
-|6     |LUT1          |    23|
-|7     |LUT2          |   247|
-|8     |LUT3          |   115|
-|9     |LUT4          |   111|
-|10    |LUT5          |    69|
-|11    |LUT6          |   525|
-|12    |MUXF7         |   136|
-|13    |MUXF8         |    68|
-|14    |FDRE          |  1574|
-|15    |FDSE          |     3|
-|16    |IBUF          |     3|
-|17    |OBUF          |    14|
+|4     |CARRY4        |    53|
+|5     |DSP48E1       |     5|
+|6     |DSP48E1_1     |     6|
+|7     |LUT1          |    28|
+|8     |LUT2          |   275|
+|9     |LUT3          |   286|
+|10    |LUT4          |    66|
+|11    |LUT5          |   121|
+|12    |LUT6          |  2108|
+|13    |MUXF7         |   640|
+|14    |MUXF8         |   320|
+|15    |FDRE          |  2273|
+|16    |FDSE          |    13|
+|17    |IBUF          |     3|
+|18    |OBUF          |    14|
 +------+--------------+------+
 
 Report Instance Areas: 
-+------+-------------------+-------------------------------+------+
-|      |Instance           |Module                         |Cells |
-+------+-------------------+-------------------------------+------+
-|1     |top                |                               |  3009|
-|2     |  ir_buf           |reconstruction_buf             |    22|
-|3     |  u_compute        |reconstruction_compute_64_1dsp |  2541|
-|4     |    u_checker      |svd_bram_firstcol_checker      |  1867|
-|5     |  u_input_bram_mux |input_bram_mux                 |    23|
-|6     |  uart_buf_1       |uart_buf                       |   151|
-|7     |  uart_rx_1        |uart_rx                        |    71|
-|8     |  vga_buf_1        |vga_buf                        |   143|
-|9     |    vga_output_1   |vga_output                     |   134|
-+------+-------------------+-------------------------------+------+
++------+-----------------+--------------------------------+------+
+|      |Instance         |Module                          |Cells |
++------+-----------------+--------------------------------+------+
+|1     |top              |                                |  6249|
+|2     |  u_compute      |reconstruction_compute_200_5dsp |  5853|
+|3     |    u_preloader  |svd_preloader_200_5dsp          |   190|
+|4     |  uart_buf_1     |uart_buf                        |   117|
+|5     |  uart_rx_1      |uart_rx                         |    78|
+|6     |  vga_buf_1      |vga_buf                         |   138|
+|7     |    vga_output_1 |vga_output                      |   132|
++------+-----------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.566 ; gain = 240.898
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:40 . Memory (MB): peak = 1000.566 ; gain = 607.141
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1124.707 ; gain = 365.938
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 1124.707 ; gain = 730.688
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 285 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1024 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'project_mvp_top' is not ideal for floorplanning, since the cellview 'reconstruction_compute_200_5dsp' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1000.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.707 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-158 Infos, 6 Warnings, 1 Critical Warnings and 0 Errors encountered.
+284 Infos, 6 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 1000.566 ; gain = 618.680
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.566 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 1124.707 ; gain = 742.211
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.707 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/project_mvp_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file project_mvp_top_utilization_synth.rpt -pb project_mvp_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 12:26:11 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 14:21:48 2026...

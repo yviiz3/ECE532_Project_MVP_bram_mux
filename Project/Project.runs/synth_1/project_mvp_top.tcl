@@ -41,6 +41,16 @@ add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Pr
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.coe
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.coe
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img06.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img10.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img08.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img09.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img03.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img04.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img05.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img01.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img02.coe
+add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_200_5dsp/svd_vectors_200x200_img07.coe
 read_mem {
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.mem
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.mem
@@ -55,9 +65,8 @@ read_mem {
 }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/input_bram_mux.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_buf.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv
-  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_bram_firstcol_checker.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/reconstruction_compute_200_5dsp.sv
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/svd_preloader_200_5dsp.sv
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/new/project_mvp_top.sv
 }
 read_verilog -library xil_defaultlib {

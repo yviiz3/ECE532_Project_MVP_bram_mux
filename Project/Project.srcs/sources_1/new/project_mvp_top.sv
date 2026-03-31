@@ -40,10 +40,19 @@ module project_mvp_top(
         .out_state  (rx_state)
     );
     
+    localparam int EXP_W         = 16;
+    localparam int OUT_W         = 4;
+    localparam int IMG_N         = 200;
+    localparam int K             = 100;
+    localparam int BUF           = 5;
+    localparam int EXP_MEM_DEPTH = (3*IMG_N*IMG_N) + IMG_N;
+    localparam int OUT_MEM_DEPTH = IMG_N * IMG_N;
+    localparam int EXP_ADDR_W    = $clog2(EXP_MEM_DEPTH);
+    localparam int OUT_ADDR_W    = $clog2(OUT_MEM_DEPTH);
     wire bram_ena;
     wire [0:0] bram_wea;
-    wire [13:0] bram_addra;
-    wire [16:0] bram_dina;
+    wire [EXP_ADDR_W-1:0] bram_addra;
+    wire [EXP_W-1:0]      bram_dina;
     wire uart_done;
     uart_buf uart_buf_1(
         .clk         (clk),
@@ -58,39 +67,61 @@ module project_mvp_top(
     );
     
     reg load_done;
+    reg mux_to_recon;
+    reg recon_start;
     always @(posedge clk) begin
-        if (reset)
-            load_done <= 1'b0;
-        else if (uart_done)
-            load_done <= 1'b1;
+        if (reset) begin
+            load_done    <= 1'b0;
+            mux_to_recon <= 1'b0;
+            recon_start  <= 1'b0;
+        end
+        else begin
+            if (uart_done)
+                load_done <= 1'b1;
+    
+            mux_to_recon <= load_done;
+            recon_start  <= mux_to_recon;
+        end
     end
     
     localparam int W = 17;
     // mux to input_bram
-    logic              mux_bram_ena;
-    logic [0:0]        mux_bram_wea;
-    logic [13:0]       mux_bram_addra;
-    logic [W-1:0]      mux_bram_dina;
-    logic [W-1:0]      mux_bram_douta;
-    logic              mux_bram_enb;
-    logic [0:0]        mux_bram_web;
-    logic [13:0]       mux_bram_addrb;
-    logic [W-1:0]      mux_bram_dinb;
-    logic [W-1:0]      mux_bram_doutb;
 
+    logic                    mux_bram_ena;
+    logic [0:0]              mux_bram_wea;
+    logic [EXP_ADDR_W-1:0]   mux_bram_addra;
+    logic [EXP_W-1:0]        mux_bram_dina;
+    logic [EXP_W-1:0]        mux_bram_douta;
+    
+    logic                    mux_bram_enb;
+    logic [0:0]              mux_bram_web;
+    logic [EXP_ADDR_W-1:0]   mux_bram_addrb;
+    logic [EXP_W-1:0]        mux_bram_dinb;
+    logic [EXP_W-1:0]        mux_bram_doutb;
     logic status_1;
     logic status_2;
     logic status_3;
 
-    assign status_1 = ~load_done;
+//    assign status_1 = ~load_done;
+//    assign status_2 = 1'b0;
+//    assign status_3 =  load_done;
+    
+//    assign status_1 = 1'b0;
+//    assign status_2 = 1'b0;
+//    assign status_3 = 1'b1;
+    assign status_1 = ~mux_to_recon;
     assign status_2 = 1'b0;
-    assign status_3 =  load_done;
-
+    assign status_3 =  mux_to_recon;
     logic [13:0] bram_addr;
     logic [W-1:0] bram_dout;
+        
+    logic [EXP_ADDR_W-1:0] exp_u_bram_addr;
+    logic [EXP_ADDR_W-1:0] exp_v_bram_addr;
+    logic [EXP_W-1:0]      exp_u_bram_dout;
+    logic [EXP_W-1:0]      exp_v_bram_dout;
     input_bram_mux #(
-        .ADDR_W(14),
-        .DATA_W(W)
+        .ADDR_W(EXP_ADDR_W),
+        .DATA_W(EXP_W)
     ) u_input_bram_mux (
         .clk        (clk),
         .reset      (reset),
@@ -114,30 +145,31 @@ module project_mvp_top(
         .a_din_1    (bram_dina),
         .a_dout_1   (),
         .b_en_1     (1'b0),
-        .b_addr_1   (14'd0),
+        .b_addr_1   ('0),
         .b_dout_1   (),
         .status_1   (status_1),
 
         // Victor
         .a_en_2     (1'b0),
         .a_we_2     (1'b0),
-        .a_addr_2   (14'd0),
+        .a_addr_2   ('0),
         .a_din_2    ('0),
         .a_dout_2   (),
         .b_en_2     (1'b0),
-        .b_addr_2   (14'd0),
+        .b_addr_2   ('0),
         .b_dout_2   (),
         .status_2   (status_2),
 
         // Jonathan
-        .a_en_3     (1'b0),
+        .a_en_3     (recon_start),
         .a_we_3     (1'b0),
-        .a_addr_3   (14'd0),
+        .a_addr_3   (exp_u_bram_addr),
         .a_din_3    ('0),
-        .a_dout_3   (),
-        .b_en_3     (load_done),
-        .b_addr_3   (bram_addr),
-        .b_dout_3   (bram_dout),
+        .a_dout_3   (exp_u_bram_dout),
+        
+        .b_en_3     (recon_start),
+        .b_addr_3   (exp_v_bram_addr),
+        .b_dout_3   (exp_v_bram_dout),
         .status_3   (status_3)
     );
     
@@ -156,48 +188,96 @@ module project_mvp_top(
         .dinb  (mux_bram_dinb),
         .doutb (mux_bram_doutb)
     );
-    localparam int FRAC = 8;
-    localparam int N = 64;
-    localparam int MEM_DEPTH = 12354;
-    localparam int LED_BLINK_BIT = 24;
+
+//    localparam int FRAC = 8;
+//    localparam int N = 64;
+//    localparam int MEM_DEPTH = 12354;
+//    localparam int LED_BLINK_BIT = 24;
     
-    logic [13:0] bram_addr_in;
-    logic [W-1:0] bram_din;
-    logic wea;
-    logic led_pass;
-    reconstruction_compute_64_1dsp #(
-        .W(W),
-        .FRAC(FRAC),
-        .N(N),
-        .MEM_DEPTH(MEM_DEPTH),
-        .LED_BLINK_BIT(LED_BLINK_BIT)
+//    logic [13:0] bram_addr_in;
+//    logic [W-1:0] bram_din;
+//    logic wea;
+//    logic led_pass;
+//    reconstruction_compute_64_1dsp #(
+//        .W(W),
+//        .FRAC(FRAC),
+//        .N(N),
+//        .MEM_DEPTH(MEM_DEPTH),
+//        .LED_BLINK_BIT(LED_BLINK_BIT)
+//    ) u_compute (
+//        .clk(clk),
+//        .rst(reset | ~load_done),
+//        .bram_dout(bram_dout),
+//        .bram_addr(bram_addr),
+//        .bram_addr_in(bram_addr_in),
+//        .bram_din(bram_din),
+//        .wea(wea),
+//        .led_pass(led_pass)
+//    );
+    
+
+    
+    logic [OUT_ADDR_W-1:0] out_bram_addr;
+    logic [OUT_W-1:0]      out_bram_din;
+    logic                  out_bram_we;
+    logic                  recon_done;
+//    blk_mem_gen_0 input_bram (
+//        .clka  (clk),
+//        .ena   (1'b1),
+//        .wea   (1'b0),
+//        .addra (exp_u_bram_addr),
+//        .dina  ('0),
+//        .douta (exp_u_bram_dout),
+    
+//        .clkb  (clk),
+//        .enb   (1'b1),
+//        .web   (1'b0),
+//        .addrb (exp_v_bram_addr),
+//        .dinb  ('0),
+//        .doutb (exp_v_bram_dout)
+//    );
+    
+    reconstruction_compute_200_5dsp #(
+        .W(EXP_W),
+        .OUT_W(OUT_W),
+        .FRAC_UV(14),
+        .N(IMG_N),
+        .K(K),
+        .BUF(BUF),
+        .EXP_MEM_DEPTH(EXP_MEM_DEPTH),
+        .OUT_MEM_DEPTH(OUT_MEM_DEPTH)
     ) u_compute (
-        .clk(clk),
-        .rst(reset | ~load_done),
-        .bram_dout(bram_dout),
-        .bram_addr(bram_addr),
-        .bram_addr_in(bram_addr_in),
-        .bram_din(bram_din),
-        .wea(wea),
-        .led_pass(led_pass)
+        .clk            (clk),
+        .rst            (reset | ~recon_start),
+    
+        .exp_u_bram_dout(exp_u_bram_dout),
+        .exp_v_bram_dout(exp_v_bram_dout),
+        .exp_u_bram_addr(exp_u_bram_addr),
+        .exp_v_bram_addr(exp_v_bram_addr),
+    
+        .out_bram_addr  (out_bram_addr),
+        .out_bram_din   (out_bram_din),
+        .out_bram_we    (out_bram_we),
+    
+        .done           (recon_done)
     );
     
-    logic [15:0] vga_bram_addr_in;
-    logic [3:0] vga_bram_din;
-    logic out_wea;
-    reconstruction_buf #(
-        .W(17),
-        .SRC_W(64),
-        .DST_W(640),
-        .A_BASE(8258)
-    ) ir_buf (
-        .in_bram_addr_in (bram_addr_in),
-        .in_bram_din     (bram_din),
-        .in_wea          (wea),
-        .out_bram_addr_in(vga_bram_addr_in),
-        .out_bram_din    (vga_bram_din),
-        .out_wea         (out_wea)
-    );
+//    logic [15:0] vga_bram_addr_in;
+//    logic [3:0] vga_bram_din;
+//    logic out_wea;
+//    reconstruction_buf #(
+//        .W(17),
+//        .SRC_W(64),
+//        .DST_W(640),
+//        .A_BASE(8258)
+//    ) ir_buf (
+//        .in_bram_addr_in (bram_addr_in),
+//        .in_bram_din     (bram_din),
+//        .in_wea          (wea),
+//        .out_bram_addr_in(vga_bram_addr_in),
+//        .out_bram_din    (vga_bram_din),
+//        .out_wea         (out_wea)
+//    );
 
     wire clk_25M;
     wire clk_locked;
@@ -210,12 +290,24 @@ module project_mvp_top(
     
     wire [15:0] bram_addrb_vga;
     wire [3:0] bram_dout_vga;
+//    blk_mem_gen_1 output_bram (
+//        .clka  (clk),
+//        .ena   (1'b1),
+//        .wea   (out_wea),
+//        .addra (vga_bram_addr_in),
+//        .dina  (vga_bram_din),
+    
+//        .clkb  (clk_25M),
+//        .enb   (en),
+//        .addrb (bram_addrb_vga),
+//        .doutb (bram_dout_vga)
+//    );
     blk_mem_gen_1 output_bram (
         .clka  (clk),
         .ena   (1'b1),
-        .wea   (out_wea),
-        .addra (vga_bram_addr_in),
-        .dina  (vga_bram_din),
+        .wea   (out_bram_we),
+        .addra (out_bram_addr),
+        .dina  (out_bram_din),
     
         .clkb  (clk_25M),
         .enb   (en),

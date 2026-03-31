@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Mar 31 11:44:11 2026
+// Date        : Tue Mar 31 13:07:54 2026
 // Host        : Re1nA running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
@@ -16,17 +16,17 @@
 (* x_core_info = "blk_mem_gen_v8_4_2,Vivado 2018.3" *)
 module blk_mem_gen_0(clka, ena, wea, addra, dina, douta, clkb, enb, web, addrb, 
   dinb, doutb)
-/* synthesis syn_black_box black_box_pad_pin="clka,ena,wea[0:0],addra[16:0],dina[16:0],douta[16:0],clkb,enb,web[0:0],addrb[16:0],dinb[16:0],doutb[16:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clka,ena,wea[0:0],addra[16:0],dina[15:0],douta[15:0],clkb,enb,web[0:0],addrb[16:0],dinb[15:0],doutb[15:0]" */;
   input clka;
   input ena;
   input [0:0]wea;
   input [16:0]addra;
-  input [16:0]dina;
-  output [16:0]douta;
+  input [15:0]dina;
+  output [15:0]douta;
   input clkb;
   input enb;
   input [0:0]web;
   input [16:0]addrb;
-  input [16:0]dinb;
-  output [16:0]doutb;
+  input [15:0]dinb;
+  output [15:0]doutb;
 endmodule

@@ -52,8 +52,8 @@ module vga_buf(
         .v_valid_count (v_valid_count)
     );
 
-    assign in_range = (v_valid_count < 64) && (h_valid_count < 64);
-    assign bram_addrb = in_range ? (v_valid_count * 64 + h_valid_count):0;
+    assign in_range = (v_valid_count < 200) && (h_valid_count < 200);
+    assign bram_addrb = in_range ? (v_valid_count * 200 + h_valid_count) : 0;
 
 //    always @(posedge clk) begin
 //        if (!en) begin
