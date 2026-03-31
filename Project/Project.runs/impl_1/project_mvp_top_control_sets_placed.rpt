@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Mar 30 17:02:34 2026
+| Date         : Tue Mar 31 12:27:05 2026
 | Host         : Re1nA running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file project_mvp_top_control_sets_placed.rpt
 | Design       : project_mvp_top
@@ -70,14 +70,14 @@ Table of Contents
 +------------------------+---------------------------------------+-------------------------------------------------+------------------+----------------+
 |      Clock Signal      |             Enable Signal             |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
 +------------------------+---------------------------------------+-------------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[6]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[4]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[5]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[1]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[0]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
 |  clk_IBUF_BUFG         | uart_rx_1/data_out[7]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
-|  clk_IBUF_BUFG         | uart_rx_1/data_out[2]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[5]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[6]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[0]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[1]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
 |  clk_IBUF_BUFG         | uart_rx_1/data_out[3]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[4]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
+|  clk_IBUF_BUFG         | uart_rx_1/data_out[2]                 | uart_rx_1/data_out[7]_i_1_n_0                   |                1 |              1 |
 |  clk_IBUF_BUFG         |                                       |                                                 |                1 |              2 |
 |  clk_IBUF_BUFG         | load_done                             |                                                 |                2 |              2 |
 |  vga_clk/inst/clk_out1 |                                       |                                                 |                3 |              3 |
@@ -85,94 +85,94 @@ Table of Contents
 |  vga_clk/inst/clk_out1 |                                       | vga_buf_1/vga_output_1/data_valid_delayed_reg   |                1 |              4 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/state_reg[4][0]   | u_compute/u_checker/load_done_reg               |                3 |              5 |
 |  clk_IBUF_BUFG         | u_compute/k_reg[6]_i_1_n_0            | u_compute/u_checker/load_done_reg               |                2 |              7 |
-|  clk_IBUF_BUFG         | uart_buf_1/byte0[7]_i_1_n_0           | reset_IBUF                                      |                2 |              8 |
 |  clk_IBUF_BUFG         | uart_buf_1/byte1[7]_i_1_n_0           | reset_IBUF                                      |                1 |              8 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/CEP               | u_compute/u_checker/load_done_reg               |                3 |              9 |
+|  clk_IBUF_BUFG         | uart_buf_1/byte0[7]_i_1_n_0           | reset_IBUF                                      |                2 |              8 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/state_reg[0]_0[0] | u_compute/u_checker/load_done_reg               |                5 |              9 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/CEP               | u_compute/u_checker/load_done_reg               |                3 |              9 |
 |  clk_IBUF_BUFG         |                                       | u_compute/u_checker/load_done_reg               |                4 |             10 |
-|  vga_clk/inst/clk_out1 |                                       | vga_buf_1/vga_output_1/h_count[9]_i_1_n_0       |                4 |             10 |
 |  vga_clk/inst/clk_out1 | vga_buf_1/vga_output_1/v_count        | vga_buf_1/vga_output_1/v_count[9]_i_1_n_0       |                4 |             10 |
+|  vga_clk/inst/clk_out1 |                                       | vga_buf_1/vga_output_1/h_count[9]_i_1_n_0       |                4 |             10 |
 |  clk_IBUF_BUFG         |                                       | reset_IBUF                                      |                6 |             13 |
-|  clk_IBUF_BUFG         | u_compute/compute_rd_addr[13]_i_1_n_0 | u_compute/u_checker/load_done_reg               |                5 |             14 |
 |  clk_IBUF_BUFG         | uart_rx_1/rx_state                    | reset_IBUF                                      |                8 |             14 |
+|  clk_IBUF_BUFG         | u_compute/compute_rd_addr[13]_i_1_n_0 | u_compute/u_checker/load_done_reg               |                5 |             14 |
 |  clk_IBUF_BUFG         |                                       | uart_rx_1/clk_count[15]_i_1_n_0                 |                6 |             16 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[32]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[44]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[48]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[49]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[0]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[35]0   | u_compute/u_checker/load_done_reg               |                8 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[46]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[24]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[47]0   | u_compute/u_checker/load_done_reg               |               14 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[17]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[2]0    | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[33]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[12]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[15]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[37]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[38]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[39]0   | u_compute/u_checker/load_done_reg               |                8 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[43]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[27]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[11]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[14]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[18]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[20]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[21]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[4]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[59]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[40]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[9]0    | u_compute/u_checker/load_done_reg               |               14 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[6]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[53]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[56]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[5]0    | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[50]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[8]0    | u_compute/u_checker/load_done_reg               |                8 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[54]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[60]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[58]0   | u_compute/u_checker/load_done_reg               |               10 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[62]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[63]0   | u_compute/u_checker/load_done_reg               |               12 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[55]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[51]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[52]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[61]0   | u_compute/u_checker/load_done_reg               |               10 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[57]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[16]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[23]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[28]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[34]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/sv_reg[16]_i_1_n_0          | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/s_reg[16]_i_1_n_0           | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/scaled_s_reg[16]_i_1_n_0    | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/scale_reg[16]_i_1_n_0       | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[22]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_reg[16]_i_1_n_0           | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/vt_reg[16]_i_1_n_0          | u_compute/u_checker/load_done_reg               |                6 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[36]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[3]0    | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[7]0    | u_compute/u_checker/load_done_reg               |                8 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[42]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[26]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[41]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[45]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[10]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[25]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[13]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[19]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[1]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[29]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[28]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[30]0   | u_compute/u_checker/load_done_reg               |               10 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[32]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[16]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[34]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[37]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[1]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[27]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[18]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[2]0    | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[55]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[7]0    | u_compute/u_checker/load_done_reg               |                8 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[43]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[48]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[59]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[40]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[4]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[56]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[3]0    | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[41]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[45]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[51]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[60]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[20]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[8]0    | u_compute/u_checker/load_done_reg               |                8 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[50]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[47]0   | u_compute/u_checker/load_done_reg               |               14 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[5]0    | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[52]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[61]0   | u_compute/u_checker/load_done_reg               |               10 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[46]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[53]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[58]0   | u_compute/u_checker/load_done_reg               |               10 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[49]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[63]0   | u_compute/u_checker/load_done_reg               |               12 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[54]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[42]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[57]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[62]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[44]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[9]0    | u_compute/u_checker/load_done_reg               |               14 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[35]0   | u_compute/u_checker/load_done_reg               |                8 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[0]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/scaled_s_reg[16]_i_1_n_0    | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/scale_reg[16]_i_1_n_0       | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/s_reg[16]_i_1_n_0           | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[12]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
+|  clk_IBUF_BUFG         | u_compute/sv_reg[16]_i_1_n_0          | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/vt_reg[16]_i_1_n_0          | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_reg[16]_i_1_n_0           | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[25]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[26]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[33]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[38]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[6]0    | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[14]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[39]0   | u_compute/u_checker/load_done_reg               |                8 |             17 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[31]0   | u_compute/u_checker/load_done_reg               |               12 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[17]0   | u_compute/u_checker/load_done_reg               |                3 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[21]0   | u_compute/u_checker/load_done_reg               |                4 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[22]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[23]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[24]0   | u_compute/u_checker/load_done_reg               |                6 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[11]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[29]0   | u_compute/u_checker/load_done_reg               |                7 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[36]0   | u_compute/u_checker/load_done_reg               |                9 |             17 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/exp_A0_reg[15]0   | u_compute/u_checker/load_done_reg               |                5 |             17 |
 |  vga_clk/inst/clk_out1 |                                       | vga_buf_1/vga_output_1/h_valid_count[9]_i_1_n_0 |                7 |             20 |
 |  clk_IBUF_BUFG         | u_compute/bram_addr_in[13]_i_1_n_0    | u_compute/u_checker/load_done_reg               |                8 |             23 |
-|  clk_IBUF_BUFG         | uart_buf_1/bram_addra[13]_i_1_n_0     | reset_IBUF                                      |                9 |             31 |
 |  clk_IBUF_BUFG         | u_compute/counter[0]_i_1_n_0          | u_compute/u_checker/load_done_reg               |                8 |             31 |
-|  clk_IBUF_BUFG         | u_compute/u_checker/E[0]              | u_compute/u_checker/load_done_reg               |                8 |             32 |
+|  clk_IBUF_BUFG         | uart_buf_1/bram_addra[13]_i_1_n_0     | reset_IBUF                                      |                9 |             31 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/i_reg[27][0]      | u_compute/u_checker/load_done_reg               |                8 |             32 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/i_reg[28][0]      | u_compute/u_checker/load_done_reg               |                8 |             32 |
+|  clk_IBUF_BUFG         | u_compute/u_checker/E[0]              | u_compute/u_checker/load_done_reg               |                8 |             32 |
 |  clk_IBUF_BUFG         | u_compute/u_checker/CEA2              | u_compute/u_checker/load_done_reg               |               10 |             34 |
 +------------------------+---------------------------------------+-------------------------------------------------+------------------+----------------+
 

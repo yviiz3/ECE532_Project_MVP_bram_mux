@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon Mar 30 17:03:24 2026
+| Date             : Tue Mar 31 12:27:56 2026
 | Host             : Re1nA running 64-bit major release  (build 9200)
 | Command          : report_power -file project_mvp_top_power_routed.rpt -pb project_mvp_top_power_summary_routed.pb -rpx project_mvp_top_power_routed.rpx
 | Design           : project_mvp_top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.006 |        6 |       --- |             --- |
-| Slice Logic    |     0.001 |     3105 |       --- |             --- |
-|   LUT as Logic |     0.001 |      947 |     63400 |            1.49 |
+| Slice Logic    |     0.001 |     3106 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      947 |     63400 |            1.49 |
 |   CARRY4       |    <0.001 |       80 |     15850 |            0.50 |
-|   Register     |    <0.001 |     1580 |    126800 |            1.25 |
 |   F7/F8 Muxes  |    <0.001 |      221 |     63400 |            0.35 |
-|   Others       |     0.000 |       84 |       --- |             --- |
+|   Register     |    <0.001 |     1580 |    126800 |            1.25 |
+|   Others       |     0.000 |       85 |       --- |             --- |
 | Signals        |     0.002 |     2611 |       --- |             --- |
 | Block RAM      |     0.011 |       24 |       135 |           17.78 |
 | MMCM           |     0.116 |        1 |         6 |           16.67 |

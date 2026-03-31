@@ -31,9 +31,12 @@ module input_bram_mux #(
     output logic [0:0]        bram_wea,
     output logic [ADDR_W-1:0] bram_addra,
     output logic [DATA_W-1:0] bram_dina,
-
+    input  logic [DATA_W-1:0] bram_douta,
+    
     output logic              bram_enb,
+    output logic [0:0]        bram_web,
     output logic [ADDR_W-1:0] bram_addrb,
+    output logic [DATA_W-1:0] bram_dinb,
     input  logic [DATA_W-1:0] bram_doutb,
 
     // UART
@@ -41,6 +44,7 @@ module input_bram_mux #(
     input  logic              a_we_1,
     input  logic [ADDR_W-1:0] a_addr_1,
     input  logic [DATA_W-1:0] a_din_1,
+    output logic [DATA_W-1:0] a_dout_1,
     input  logic              b_en_1,
     input  logic [ADDR_W-1:0] b_addr_1,
     output logic [DATA_W-1:0] b_dout_1,
@@ -51,6 +55,7 @@ module input_bram_mux #(
     input  logic              a_we_2,
     input  logic [ADDR_W-1:0] a_addr_2,
     input  logic [DATA_W-1:0] a_din_2,
+    output logic [DATA_W-1:0] a_dout_2,
     input  logic              b_en_2,
     input  logic [ADDR_W-1:0] b_addr_2,
     output logic [DATA_W-1:0] b_dout_2,
@@ -61,6 +66,7 @@ module input_bram_mux #(
     input  logic              a_we_3,
     input  logic [ADDR_W-1:0] a_addr_3,
     input  logic [DATA_W-1:0] a_din_3,
+    output logic [DATA_W-1:0] a_dout_3,
     input  logic              b_en_3,
     input  logic [ADDR_W-1:0] b_addr_3,
     output logic [DATA_W-1:0] b_dout_3,
@@ -113,8 +119,10 @@ module input_bram_mux #(
     assign bram_addra = sel_addr(a_addr_1, a_addr_2, a_addr_3, status_array);
     assign bram_dina = sel_data(a_din_1, a_din_2, a_din_3, status_array);
 
-    assign bram_enb = sel1(b_en_1, b_en_2, b_en_3, status_array);
+    assign bram_enb   = sel1(b_en_1, b_en_2, b_en_3, status_array);
+    assign bram_web[0]= 1'b0;
     assign bram_addrb = sel_addr(b_addr_1, b_addr_2, b_addr_3, status_array);
+    assign bram_dinb  = '0;
 
     always @(posedge clk) begin
         if (reset)
@@ -122,7 +130,11 @@ module input_bram_mux #(
         else
             status_array_delayed <= status_array;
     end
-
+    
+    assign a_dout_1 = status_array_delayed[0] ? bram_douta : '0;
+    assign a_dout_2 = status_array_delayed[1] ? bram_douta : '0;
+    assign a_dout_3 = status_array_delayed[2] ? bram_douta : '0;
+    
     assign b_dout_1 = status_array_delayed[0] ? bram_doutb : '0;
     assign b_dout_2 = status_array_delayed[1] ? bram_doutb : '0;
     assign b_dout_3 = status_array_delayed[2] ? bram_doutb : '0;

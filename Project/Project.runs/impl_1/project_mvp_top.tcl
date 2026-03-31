@@ -76,8 +76,8 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/synth_1/project_mvp_top.dcp
   read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
   link_design -top project_mvp_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

@@ -71,9 +71,11 @@ module project_mvp_top(
     logic [0:0]        mux_bram_wea;
     logic [13:0]       mux_bram_addra;
     logic [W-1:0]      mux_bram_dina;
-
+    logic [W-1:0]      mux_bram_douta;
     logic              mux_bram_enb;
+    logic [0:0]        mux_bram_web;
     logic [13:0]       mux_bram_addrb;
+    logic [W-1:0]      mux_bram_dinb;
     logic [W-1:0]      mux_bram_doutb;
 
     logic status_1;
@@ -97,9 +99,12 @@ module project_mvp_top(
         .bram_wea   (mux_bram_wea),
         .bram_addra (mux_bram_addra),
         .bram_dina  (mux_bram_dina),
+        .bram_douta (mux_bram_douta),
 
         .bram_enb   (mux_bram_enb),
+        .bram_web   (mux_bram_web),
         .bram_addrb (mux_bram_addrb),
+        .bram_dinb  (mux_bram_dinb),
         .bram_doutb (mux_bram_doutb),
 
         // UART
@@ -107,6 +112,7 @@ module project_mvp_top(
         .a_we_1     (bram_wea[0]),
         .a_addr_1   (bram_addra),
         .a_din_1    (bram_dina),
+        .a_dout_1   (),
         .b_en_1     (1'b0),
         .b_addr_1   (14'd0),
         .b_dout_1   (),
@@ -117,6 +123,7 @@ module project_mvp_top(
         .a_we_2     (1'b0),
         .a_addr_2   (14'd0),
         .a_din_2    ('0),
+        .a_dout_2   (),
         .b_en_2     (1'b0),
         .b_addr_2   (14'd0),
         .b_dout_2   (),
@@ -127,6 +134,7 @@ module project_mvp_top(
         .a_we_3     (1'b0),
         .a_addr_3   (14'd0),
         .a_din_3    ('0),
+        .a_dout_3   (),
         .b_en_3     (load_done),
         .b_addr_3   (bram_addr),
         .b_dout_3   (bram_dout),
@@ -139,13 +147,15 @@ module project_mvp_top(
         .wea   (mux_bram_wea),
         .addra (mux_bram_addra),
         .dina  (mux_bram_dina),
+        .douta (mux_bram_douta),
 
         .clkb  (clk),
         .enb   (mux_bram_enb),
+        .web   (mux_bram_web),
         .addrb (mux_bram_addrb),
+        .dinb  (mux_bram_dinb),
         .doutb (mux_bram_doutb)
     );
-    
     localparam int FRAC = 8;
     localparam int N = 64;
     localparam int MEM_DEPTH = 12354;

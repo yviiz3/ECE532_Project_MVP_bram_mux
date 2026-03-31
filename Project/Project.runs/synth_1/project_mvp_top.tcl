@@ -69,13 +69,13 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-
 read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
